@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    border: black 1px solid;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+}
+
+.logo {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+}
+
+#link-to-login,
+#link-to-register {
+    margin: 0 1em 0 1em;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+}

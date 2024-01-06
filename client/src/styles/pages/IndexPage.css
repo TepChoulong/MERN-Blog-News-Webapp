@@ -1,0 +1,35 @@
+.post {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.post #post-image {
+    max-width: 100%;
+    width: 400px;
+}
+
+.post .text #link-to-title-post {
+    text-decoration: none;
+    color: black;
+    font-size: 3.2em;
+}
+
+.post .text #description-post {
+    font-size: 1.3em;
+}
+
+.post .text .info {
+    gap: 1em;
+}
+
+.post .text .info #link-to-auther-post {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.post .text .info #date-post {
+    font-size: 1em;
+}
