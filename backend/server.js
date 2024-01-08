@@ -34,6 +34,24 @@ app.post("/register", async (req, res) => {
   }
 });
 
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const userDoc = await User.findOne({ email });
+    if (userDoc) {
+      if (password === userDoc.password) {
+        res.json("Login Successful: " + userDoc.username);
+      } else {
+        res.status(400).json("Wrong password");
+      }
+    } else {
+      res.status(400).json("User not found");
+    }
+  } catch (e) {
+    res.status(400).json("Error: " + e);
+  }
+});
+
 app.listen(port, (err) => {
   if (err) {
     console.log(err);
