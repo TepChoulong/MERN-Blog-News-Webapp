@@ -22,6 +22,7 @@ export default function RegisterPage() {
         password,
         confirmedPassword,
       }),
+      credentials: "include",
     });
 
     if (res.status === 200) {

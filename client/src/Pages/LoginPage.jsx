@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 import "../styles/pages/LoginPage.css";
 
 export default function LoginPage() {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:8080/login", {
+    const response = await fetch("http://localhost:8080/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,14 +20,40 @@ export default function LoginPage() {
         email,
         password,
       }),
+      credentials: "include",
     });
-  }
+
+    if (response.ok) {
+      setRedirect(true);
+    } else {
+      alert("Wrong Credentials");
+    }
+
+    console.log(redirect);
+
+    if (redirect) {
+      navigate("/");
+    } else {
+      console.log("Failed");
+    }
+  };
 
   return (
-    <form action="" className="login-form" onSubmit={handleSubmit}>
+    <>
+      <form action="" className="login-form" onSubmit={handleSubmit}>
         <h1>Login</h1>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <button type="submit" id="submit-btn-login">
           Login
         </button>
