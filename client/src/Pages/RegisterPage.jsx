@@ -11,7 +11,7 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:8080/register", {
+    const res = await fetch("http://localhost:8080/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,6 +23,12 @@ export default function RegisterPage() {
         confirmedPassword,
       }),
     });
+
+    if (res.status === 200) {
+      alert("registration success");
+    } else {
+      alert("registration failed");
+    }
   };
 
   return (
