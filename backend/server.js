@@ -3,9 +3,9 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 
-const User = require("./models/user");
 const registerRouter = require("./routes/register");
 const loginRouter = require("./routes/login");
+const profileRouter = require("./routes/profile");
 
 require("dotenv").config();
 
@@ -26,23 +26,17 @@ mongoose
   .then(() => console.log("Database connected!"))
   .catch((err) => console.log(err));
 
-// $ Register
-app.use("/register", registerRouter);
+app.use("/register", registerRouter); // $ Register
+app.use("/login", loginRouter); // $ Login
+app.use("/profile", profileRouter); // $ Profile
 
-// $ Login
-app.use("/login", loginRouter);
-
-// Get the userst
+// Get all the users
 app.get("/getUsers", async (req, res) => {
   try {
     User.find().then((users) => res.json(users));
   } catch (e) {
     res.status(400).json("Error: " + e);
   }
-});
-
-app.get("/profile", (req, res) => {
-  res.json(req.cookies);
 });
 
 app.listen(port, (err) => {

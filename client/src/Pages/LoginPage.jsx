@@ -6,7 +6,7 @@ import "../styles/pages/LoginPage.css";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [redirect, setRedirect] = useState(false);
+  const [redirect, setRedirect] = useState(true);
 
   const navigate = useNavigate();
 
@@ -24,18 +24,18 @@ export default function LoginPage() {
       credentials: "include",
     });
 
-    if (response.ok) {
+    console.log(response.ok);
+
+    if (response.ok === true) {
       setRedirect(true);
+      console.log(redirect);
+      if (redirect === true) {
+        navigate("/");
+      } else {
+        console.log("Redirect Failed");
+      }
     } else {
       alert("Wrong Credentials");
-    }
-
-    console.log(redirect);
-
-    if (redirect) {
-      navigate("/");
-    } else {
-      console.log("Failed");
     }
   };
 
