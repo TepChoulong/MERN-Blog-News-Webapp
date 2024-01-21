@@ -20,13 +20,13 @@ export default function header() {
               <Link className="link">Home</Link>
             </li>
             <li>
+              <Link className="link">Business</Link>
+            </li>
+            <li>
               <Link className="link">Sports</Link>
             </li>
             <li>
               <Link className="link">Technologies</Link>
-            </li>
-            <li>
-              <Link className="link">Business</Link>
             </li>
             <li>
               <Link className="link">Travels</Link>
@@ -58,13 +58,16 @@ export default function header() {
                 <Link className="link">Home</Link>
               </li>
               <li>
+                <Link className="link">Business</Link>
+              </li>
+              <li>
                 <Link className="link">Sports</Link>
               </li>
               <li>
                 <Link className="link">Technologies</Link>
               </li>
               <li>
-                <Link className="link">Business</Link>
+                <Link className="link">Travels</Link>
               </li>
             </ul>
           </div>
