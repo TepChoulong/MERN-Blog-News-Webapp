@@ -28,6 +28,9 @@ export default function header() {
             <li>
               <Link className="link">Business</Link>
             </li>
+            <li>
+              <Link className="link">Travels</Link>
+            </li>
           </ul>
         </div>
         {/* Mobile */}
