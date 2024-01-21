@@ -1,120 +1,260 @@
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-  background-color: #ffffff;
-}
-
-.display-links-container-desktop {
-  display: block;
-}
-.display-links-container-mobile {
-  display: none;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 12%;
-  height: 12%;
-}
-
-.logo h1 {
-  font-size: 17pt;
-}
-
-.links-container ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.links-container ul li {
-  list-style: none;
-}
-
-.links-container ul li .link {
-  color: black;
-  text-decoration: none;
-  margin: 0 1em 0 1em;
-}
-
-/** Mobile  */
-@media screen and (max-width: 700px) {
-  header {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1em;
     background-color: #ffffff;
-  }
+}
 
-  .display-links-container-desktop {
+.display-links-container-desktop {
+    display: flex;
+}
+
+.display-links-container-mobile {
     display: none;
-  }
-  .display-links-container-mobile {
-    display: block;
-  }
+}
 
-  .logo {
+.logo {
     display: flex;
     align-items: center;
-  }
+}
 
-  .logo img {
-    width: 8%;
-    height: 8%;
-  }
+.logo img {
+    width: 12%;
+    height: 12%;
+}
 
-  .logo h1 {
-    font-size: 14pt;
-  }
+.logo h1 {
+    font-size: 17pt;
+}
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 2%;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
+.links-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  .dropdown-btn {
-    width: 1.5em;
-    height: 1.5em;
-    font-size: 20pt;
-    text-align: center;
-    font-weight: bold;
-    background-color: white;
-    border: none;
-  }
-
-  .links-container ul {
-    display: block;
-  }
-
-  .links-container ul li {
+.links-container ul li {
     list-style: none;
-    text-align: center;
-  }
+}
 
-  .links-container ul li .link {
-    float: none;
+.links-container ul li .link {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
-    display: block;
-  }
-  .links-container ul li .link:hover {
-    float: none;
-    color: rgb(255, 0, 0);
-    padding: 12px 16px;
+    margin: 0 1em 0 1em;
+}
+
+.login-register-container {
+    margin-left: 2em;
+}
+
+.login-register-container .link-to-login,
+.login-register-container .link-to-register {
     text-decoration: none;
-    display: block;
-  }
+    margin: 0.5em;
+    border-radius: 0.4em;
+}
+
+.login-register-container .link-to-register {
+    padding: 0.55em 1.5em;
+    background-color: rgb(20, 85, 206);
+    color: #f9f9f9;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.login-register-container .link-to-login {
+    padding: 0.46em 2em;
+    border: 2px solid rgb(20, 85, 206);
+    color: rgb(20, 85, 206);
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+
+/** Mobile  */
+
+@media screen and (max-width: 700px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        background-color: #ffffff;
+    }
+    .display-links-container-desktop {
+        display: none;
+    }
+    .display-links-container-mobile {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    .logo img {
+        width: 15%;
+        height: 15%;
+    }
+    .logo h1 {
+        font-size: 11pt;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 2%;
+        top: 9.3%;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dropdown-btn {
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 20pt;
+        text-align: center;
+        font-weight: bold;
+        background-color: white;
+        border: none;
+    }
+    .links-container ul {
+        display: block;
+    }
+    .links-container ul li {
+        list-style: none;
+        text-align: center;
+    }
+    .links-container ul li .link {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .links-container ul li .link:hover {
+        float: none;
+        color: rgb(255, 0, 0);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .login-register-container {
+        margin-left: 2em;
+    }
+    .login-register-container .link-to-login,
+    .login-register-container .link-to-register {
+        text-decoration: none;
+        margin: 0.5em;
+        border-radius: 0.4em;
+    }
+    .login-register-container .link-to-register {
+        padding: 0.35em 0.8em;
+        background-color: rgb(20, 85, 206);
+        color: #f9f9f9;
+        font-size: 10pt;
+        font-weight: 600;
+    }
+    .login-register-container .link-to-login {
+        padding: 0.26em 1em;
+        border: 2px solid rgb(20, 85, 206);
+        color: rgb(20, 85, 206);
+        font-size: 10pt;
+        font-weight: 600;
+    }
+}
+
+
+/** tablet  */
+
+@media screen and (max-width: 1030px) and (min-width: 700px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        background-color: #ffffff;
+    }
+    .display-links-container-desktop {
+        display: none;
+    }
+    .display-links-container-mobile {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    .logo img {
+        width: 8%;
+        height: 8%;
+    }
+    .logo h1 {
+        font-size: 14pt;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 2%;
+        top: 9.3%;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dropdown-btn {
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 20pt;
+        text-align: center;
+        font-weight: bold;
+        background-color: white;
+        border: none;
+    }
+    .links-container ul {
+        display: block;
+    }
+    .links-container ul li {
+        list-style: none;
+        text-align: center;
+    }
+    .links-container ul li .link {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .links-container ul li .link:hover {
+        float: none;
+        color: rgb(255, 0, 0);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .login-register-container {
+        margin-left: 2em;
+    }
+    .login-register-container .link-to-login,
+    .login-register-container .link-to-register {
+        text-decoration: none;
+        margin: 0.5em;
+        border-radius: 0.4em;
+    }
+    .login-register-container .link-to-register {
+        padding: 0.45em 1.5em;
+        background-color: rgb(20, 85, 206);
+        color: #f9f9f9;
+        font-size: 12pt;
+        font-weight: 600;
+    }
+    .login-register-container .link-to-login {
+        padding: 0.36em 2em;
+        border: 2px solid rgb(20, 85, 206);
+        color: rgb(20, 85, 206);
+        font-size: 12pt;
+        font-weight: 600;
+    }
 }
