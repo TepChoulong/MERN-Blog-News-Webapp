@@ -66,12 +66,12 @@ header {
   }
 
   .logo img {
-    width: 6%;
-    height: 6%;
+    width: 8%;
+    height: 8%;
   }
 
   .logo h1 {
-    font-size: 16pt;
+    font-size: 14pt;
   }
 
   .dropdown-content {
