@@ -32,9 +32,17 @@ export default function header() {
               <Link className="link">Travels</Link>
             </li>
           </ul>
+          <div className="login-register-container">
+            <Link className="link-to-login">Login</Link>
+            <Link className="link-to-register">Register</Link>
+          </div>
         </div>
         {/* Mobile */}
         <div className="display-links-container-mobile">
+          <div className="login-register-container">
+            <Link className="link-to-login">Login</Link>
+            <Link className="link-to-register">Register</Link>
+          </div>
           <button
             onClick={() => {
               var contents = document.getElementById("myDropdown-contents");
