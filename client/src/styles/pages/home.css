@@ -66,8 +66,7 @@ main {
   }
   /* @breaking_news-container */
   .breaking_news-container {
-    margin-top: 5em;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     h1 {
       color: #c31815;
       text-align: center;
@@ -208,7 +207,7 @@ main {
   }
   /* @breaking_news-container */
   .breaking_news-container {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     h1 {
       color: #c31815;
       text-align: center;
@@ -354,7 +353,7 @@ main {
   }
   /* @breaking_news-container */
   .breaking_news-container {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     h1 {
       color: #c31815;
       text-align: center;
