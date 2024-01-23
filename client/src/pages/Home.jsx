@@ -14,6 +14,8 @@ export default function Home() {
           {/* Post-1 */}
           <Trending_Post />
           <Trending_Post />
+          <Trending_Post />
+          <Trending_Post />
         </div>
       </div>
       <div className="breaking_news-container">
@@ -23,6 +25,8 @@ export default function Home() {
         </div>
         <div className="breaking_news-post-contents-container">
           {/* Breaking News Post 1 */}
+          <Breaking_News_Post />
+          <Breaking_News_Post />
           <Breaking_News_Post />
           <Breaking_News_Post />
           <Breaking_News_Post />
