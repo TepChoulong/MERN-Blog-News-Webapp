@@ -10,7 +10,7 @@ export default function RegisterPage() {
         <p>
           Already have an account?&nbsp;
           <Link className="login-account-link" to="/login">
-            Login
+            Login Here
           </Link>
         </p>
       </div>
@@ -41,14 +41,16 @@ export default function RegisterPage() {
             />
           </div>
           <div>
-            <button type="submit" id="submit-btn">
+            <button type="submit" id="submit-btn-register">
               Register
             </button>
           </div>
         </form>
       </div>
-      <hr />
-      <p>Or</p>
+      <div className="wrapper-or-container">
+        <hr />
+        <p>Or</p>
+      </div>
       <div className="other-auth-options">
         <div className="facebook-btn-container">
           <button>

@@ -36,8 +36,11 @@ export default function LoginPage() {
           </div>
         </form>
       </div>
-      <hr />
-      <p>Or</p>
+      <br />
+      <div className="wrapper-or-container">
+        <hr />
+        <p>Or</p>
+      </div>
       <div className="other-auth-options">
         <div className="facebook-btn-container">
           <button>
