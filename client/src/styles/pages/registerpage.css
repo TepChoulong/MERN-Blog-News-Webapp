@@ -1,0 +1,11 @@
+.input-form form div #email-input-register,
+.input-form form div #username-input-register,
+.input-form form div #password-input-register,
+.input-form form div #confirmedPassword-input-register {
+  padding: 10px 10px;
+  font-size: 12pt;
+  margin-bottom: 1em;
+  width: 100%;
+  border: 2px solid #207198;
+  border-radius: 5px;
+}
