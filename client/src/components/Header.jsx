@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "../styles/components/header.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+import LoginPage from "../pages/Loginpage";
+
 export default function header() {
   return (
     <header>
@@ -33,15 +35,15 @@ export default function header() {
             </li>
           </ul>
           <div className="login-register-container">
-            <Link className="link-to-login">Login</Link>
-            <Link className="link-to-register">Register</Link>
+            <Link className="link-to-login" to="/login">Login</Link>
+            <Link className="link-to-register" to={"/register"}>Register</Link>
           </div>
         </div>
         {/* Mobile */}
         <div className="display-links-container-mobile">
           <div className="login-register-container">
-            <Link className="link-to-login">Login</Link>
-            <Link className="link-to-register">Register</Link>
+            <Link className="link-to-login" to={"/login"}>Login</Link>
+            <Link className="link-to-register" to={"/register"}>Register</Link>
           </div>
           <button
             onClick={() => {
