@@ -1,13 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/pages/registerpage.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function RegisterPage() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmedPassword, setConfirmedPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const [redirect, setRedirect] = useState(false);
+
+  useEffect(() => {
+    // This will run whenever the value of redirect changes
+    if (redirect) {
+      console.log("redirected");
+      setRedirect(false);
+      navigate("/login");
+    } else {
+      console.log("not redirected");
+    }
+  }, [redirect]);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -23,7 +38,13 @@ export default function RegisterPage() {
           password,
         }),
       });
-      console.log(res);
+
+      if (res.ok) {
+        console.log("Registered successfully");
+        setRedirect(true);
+      } else {
+        console.log("Registration failed");
+      }
     } catch (error) {
       console.log(error);
     }
