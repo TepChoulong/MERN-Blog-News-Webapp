@@ -10,11 +10,12 @@ const port = process.env.PORT;
 
 // # Variables
 
-app.use(cors());
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-mongoose
+/* !Database Connection */
+mongoose // MongoDB Atlas Password: ls4daG4FWdVsCGlq
   .connect(process.env.MONGO_DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -22,7 +23,6 @@ mongoose
   .then(() => console.log("Database connected!"))
   .catch((err) => console.log(err));
 
-// MongoDB Atlas Password: ls4daG4FWdVsCGlq
-//
+app.use("/api", require("./routes/authRoute"));
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

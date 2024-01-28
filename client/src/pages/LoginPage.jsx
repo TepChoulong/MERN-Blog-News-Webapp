@@ -1,8 +1,50 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/pages/loginpage.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { useState, useEffect } from "react";
 
 export default function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [redirect, setRedirect] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // This will run whenever the value of redirect changes
+    if (redirect) {
+      console.log("redirected");
+      navigate("/");
+    } else {
+      console.log("not redirected");
+    }
+  }, [redirect]);
+
+  async function handleSubmit(ev) {
+    ev.preventDefault();
+
+    const res = await fetch("http://localhost:8080/api/login", {
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      credentials: "include",
+    });
+
+    if (res.ok) {
+      // Assuming setRedirect is a state-setting function
+      setRedirect(true);
+      console.log("redirecting..."); // Log here or perform other actions related to successful login
+    } else {
+      console.log("Login failed");
+    }
+  }
+
   return (
     <div className="login-page-container">
       <h2>Login</h2>
@@ -15,15 +57,23 @@ export default function LoginPage() {
         </p>
       </div>
       <div className="input-form">
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <div>
-            <input type="email" placeholder="Email" id="email-input-login" />
+            <input
+              type="email"
+              placeholder="Email"
+              id="email-input-login"
+              value={email}
+              onChange={(ev) => setEmail(ev.target.value)}
+            />
           </div>
           <div>
             <input
               type="password"
               placeholder="Password"
               id="password-input-login"
+              value={password}
+              onChange={(ev) => setPassword(ev.target.value)}
             />
           </div>
           <div>
@@ -44,12 +94,12 @@ export default function LoginPage() {
       <div className="other-auth-options">
         <div className="facebook-btn-container">
           <button>
-            <i class="bi bi-facebook"></i>Continue with Facebook
+            <i className="bi bi-facebook"></i>Continue with Facebook
           </button>
         </div>
         <div className="google-btn-container">
           <button>
-            <i class="bi bi-google"></i>Continue with Google
+            <i className="bi bi-google"></i>Continue with Google
           </button>
         </div>
       </div>

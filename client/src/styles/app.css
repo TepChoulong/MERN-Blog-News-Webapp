@@ -29,21 +29,7 @@
   flex-direction: column;
   align-items: center;
 
-  .facebook-btn-container button {
-    padding: 8px 35px;
-    width: 300px;
-    margin-bottom: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 11pt;
-  }
-  .facebook-btn-container i {
-    margin-right: 0.5em;
-    font-size: 17pt;
-  }
-
+  .facebook-btn-container button,
   .google-btn-container button {
     padding: 8px 35px;
     width: 300px;
@@ -52,10 +38,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 11pt;
+    font-size: 12pt;
+    border: none;
+    border-radius: 5px;
+    background-color: #348cd3;
+    color: #ffffff;
+    font-weight: 6cs00;
   }
+  .facebook-btn-container i,
   .google-btn-container i {
     margin-right: 0.5em;
-    font-size: 17pt;
+    font-size: 18pt;
+    color: white;
   }
 }
