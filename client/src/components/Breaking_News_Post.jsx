@@ -24,10 +24,18 @@ export default function Breaking_News_Post() {
         </p>
       </div>
       <div className="breaking_news-more_details-container">
-        <h5 className="released-time">2 hours ago</h5>
-        <div>
-          <h5 className="released-by-who">By Tep Choulong</h5>
-          <h5 className="when-posted">4 mins ago</h5>
+        <div className="detail-1">
+          <h5 className="released-time">2 hours ago</h5>
+          <div>
+            <h5 className="released-by-who">By Tep Choulong</h5>
+            <h5 className="when-posted">4 mins ago</h5>
+          </div>
+        </div>
+        <hr />
+        <div className="detail-2">
+          <i className="bi bi-bookmark"></i>
+          <i className="bi bi-suit-heart"></i>
+          <i className="bi bi-share-fill"></i>
         </div>
       </div>
     </div>

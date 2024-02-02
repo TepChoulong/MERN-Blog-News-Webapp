@@ -121,9 +121,18 @@ main {
     }
     .breaking_news-more_details-container {
       margin-top: 1em;
-      display: flex;
-      justify-content: space-between;
       font-size: 12pt;
+    }
+    .breaking_news-more_details-container .detail-1 {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin: 2.5em 0 1em;
+    }
+    .breaking_news-more_details-container .detail-2 {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1em;
     }
     .breaking_news-more_details-container .released-time {
       margin-left: 1em;
