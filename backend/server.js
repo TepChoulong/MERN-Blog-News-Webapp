@@ -26,4 +26,8 @@ mongoose // MongoDB Atlas Password: ls4daG4FWdVsCGlq
 app.use("/api", require("./routes/authRoute"));
 app.use("/profile", require("./routes/profileRoute"));
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.listen(port, () => console.log(`Server running on port ${port}`));
