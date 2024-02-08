@@ -104,9 +104,9 @@ export default function header() {
                 contents.style.display = "none";
               }
             }}
-            class="dropdown-btn"
+            className="dropdown-btn"
           >
-            <i class="bi bi-list"></i>
+            <i className="bi bi-list"></i>
           </button>
           <div
             className="dropdown-content"

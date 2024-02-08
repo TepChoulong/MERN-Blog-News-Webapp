@@ -3,7 +3,7 @@ import "./styles/app.css";
 
 import Layout from "./Layout";
 import Home from "./pages/Home";
-import LoginPage from "./pages/Loginpage";
+import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 
 function App() {
