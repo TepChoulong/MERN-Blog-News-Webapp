@@ -3,7 +3,7 @@ import "./styles/app.css";
 
 import Layout from "./Layout";
 import Home from "./pages/Home";
-import LoginPage from "./pages/Loginpage";
+import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
           {/*<Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} /> */}
-          \
         </Route>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
