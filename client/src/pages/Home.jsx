@@ -1,38 +1,30 @@
 import "../styles/pages/home.css";
-import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
-import Trending_Post from "../components/Trending_Post";
-import Breaking_News_Post from "../components/Breaking_News_Post";
-import Breaking_News_Choices from "../components/Breaking_New_Choices";
+import Trending_News_Part from "../components/Trending_News_Part";
 
 export default function Home() {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 767, maxWidth: 1023 });
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
+
   return (
     <main>
-      <div className="trending-container">
-        <h3>Trending</h3>
-        <div className="post-contents-container">
-          {/* Post-1 */}
-          <Trending_Post />
-          <Trending_Post />
-          <Trending_Post />
-          <Trending_Post />
-        </div>
-      </div>
-      <div className="breaking_news-container">
-        <h1>Breaking News</h1>
-        <div className="breaking_news-choices-container">
-          <Breaking_News_Choices />
-        </div>
-        <div className="breaking_news-post-contents-container">
-          {/* Breaking News Post 1 */}
-          <Breaking_News_Post />
-          <Breaking_News_Post />
-          <Breaking_News_Post />
-          <Breaking_News_Post />
-          <Breaking_News_Post />
-          <Breaking_News_Post />
-        </div>
-      </div>
+      {isMobile && (
+        <>
+          <Trending_News_Part />
+        </>
+      )}
+      {isTablet && (
+        <>
+          <Trending_News_Part />
+        </>
+      )}
+      {isDesktop && (
+        <>
+          <Trending_News_Part />
+        </>
+      )}
     </main>
   );
 }

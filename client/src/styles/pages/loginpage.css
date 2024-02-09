@@ -7,13 +7,21 @@
 }
 
 .login-page-container h2 {
-  font-size: 23pt;
-  margin-bottom: 0.3em;
+  font-size: 30pt;
+  margin-bottom: 0.5em;
+  color: #1b94d1;
+  text-align: center;
 }
 
 .no-account-container p {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   font-size: 11pt;
+}
+
+.create-account-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1b94d1;
 }
 
 .input-form form div #email-input-login,

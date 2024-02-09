@@ -1,3 +1,29 @@
+.register-page-container {
+  margin: 1em;
+  background-color: white;
+  padding: 1em;
+  box-shadow: 2px 2px 10px 1px rgba(88, 88, 88, 0.2);
+  border-radius: 1em;
+}
+
+.register-page-container h2 {
+  font-size: 28pt;
+  margin-bottom: 0.5em;
+  color: #1b94d1;
+  text-align: center;
+}
+
+.have-account-container p {
+  margin-bottom: 1em;
+  font-size: 11pt;
+}
+
+.login-account-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1b94d1;
+}
+
 .input-form form div #email-input-register,
 .input-form form div #username-input-register,
 .input-form form div #password-input-register,
@@ -8,4 +34,16 @@
   width: 100%;
   border: 2px solid #207198;
   border-radius: 5px;
+}
+
+#submit-btn-register {
+  padding: 10px 10px;
+  font-size: 13pt;
+  font-weight: 700;
+  margin-bottom: 2em;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #f57d1a;
 }
