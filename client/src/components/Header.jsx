@@ -38,10 +38,14 @@ export default function header() {
         <div className="display-links-container-desktop">
           <ul>
             <li>
-              <Link className="link">Home</Link>
+              <Link className="link" to={"/"}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link className="link">Business</Link>
+              <Link className="link" to="/business">
+                Business
+              </Link>
             </li>
             <li>
               <Link className="link">Sports</Link>
@@ -115,10 +119,14 @@ export default function header() {
           >
             <ul>
               <li>
-                <Link className="link">Home</Link>
+                <Link className="link" to={"/"}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link className="link">Business</Link>
+                <Link className="link" to={"/business"}>
+                  Business
+                </Link>
               </li>
               <li>
                 <Link className="link">Sports</Link>
